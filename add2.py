@@ -1,5 +1,5 @@
 import sys
 
-x, y = sys.argv[1], sys.argv[2]
+x, y = int(sys.argv[1]), int(sys.argv[2])
 
 print(x+y)
