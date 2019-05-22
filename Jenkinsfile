@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                bat 'python ${params.pyTestFile}'
+                python ${params.pyTestFile}
                 bat 'python add2.py 18 23'
             }
         }
