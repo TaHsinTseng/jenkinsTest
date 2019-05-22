@@ -7,8 +7,10 @@ pipeline {
         stage('test') {
             steps {
             	echo 'This is for testing git in sublime.'
-            	echo "The python file to run is ${params.PY_TESTFILE}"
+                echo "First run standard helloworld."
                 python helloworld.py
+            	echo "The parameterized python file to run is ${params.PY_TESTFILE}"
+                python ${params.PY_TESTFILE}
                 //python ${params.PY_TESTFILE}
                 bat 'python add2.py 18 23'
             }
